@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="EcoRide — Détails d’un covoiturage écologique">
+  <title>EcoRide — Détails du covoiturage</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/trip.js" defer></script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <svg width="36" height="36" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <circle cx="12" cy="12" r="10" fill="#2b9348"></circle>
+          <path d="M6 15c1.5-3 4.5-6 10-8" stroke="#fff" stroke-width="1.5" fill="none" stroke-linecap="round"></path>
+        </svg>
+        <span>EcoRide</span>
+      </a>
+      <nav class="main-nav" aria-label="Navigation principale">
+        <a href="index.html">Accueil</a>
+        <a href="trips.html">Covoiturages</a>
+        <a href="login.html">Connexion</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main content -->
+  <main class="container" aria-label="Détails d’un covoiturage">
+    <h1>Détails du covoiturage</h1>
+
+    <article class="card" id="tripDetails">
+      <!-- Infos chauffeur -->
+      <section aria-label="Informations du chauffeur">
+        <h2>Chauffeur</h2>
+        <div class="result-card">
+          <img src="https://via.placeholder.com/64" alt="Photo du chauffeur" class="avatar">
+          <div class="meta">
+            <p><strong>Pseudo :</strong> GreenFox</p>
+            <p><strong>Note :</strong> 4.7 ★</p>
+            <p><strong>Véhicule :</strong> Renault Zoe — Électrique</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Infos trajet -->
+      <section aria-label="Informations du trajet">
+        <h2>Trajet</h2>
+        <ul>
+          <li><strong>Départ :</strong> Paris, 20/09/2025 à 08h15</li>
+          <li><strong>Arrivée :</strong> Lyon, 20/09/2025 à 12h05</li>
+          <li><strong>Prix :</strong> 24 €</li>
+          <li><strong>Places restantes :</strong> 2</li>
+        </ul>
+      </section>
+
+      <!-- Préférences chauffeur -->
+      <section aria-label="Préférences du chauffeur">
+        <h2>Préférences</h2>
+        <ul>
+          <li>🚭 Non-fumeur</li>
+          <li>🐶 Animaux acceptés</li>
+          <li>🎶 Musique pendant le trajet</li>
+        </ul>
+      </section>
+
+      <!-- Avis chauffeur -->
+      <section aria-label="Avis des passagers">
+        <h2>Avis</h2>
+        <ul>
+          <li><strong>Alice :</strong> Chauffeur ponctuel et très sympathique !</li>
+          <li><strong>Marc :</strong> Trajet agréable, voiture confortable.</li>
+          <li><strong>Sophie :</strong> Très bon conducteur, je recommande.</li>
+        </ul>
+      </section>
+
+      <!-- Bouton participer -->
+      <div class="actions mt-12">
+        <button id="joinBtn" class="btn primary" aria-label="Participer à ce covoiturage">Participer</button>
+      </div>
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer id="contact" class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <p><strong>EcoRide</strong> — Plateforme de covoiturage écoresponsable</p>
+        <p>Contact : <a href="mailto:contact@ecoride.example">contact@ecoride.example</a></p>
+      </div>
+      <div class="footer-right">
+        <nav>
+          <a href="/legal.html">Mentions légales</a>
+        </nav>
+        <p class="small muted">© <span id="year"></span> EcoRide — Tous droits réservés</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

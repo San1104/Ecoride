@@ -1,141 +1,92 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Ecoride — Page d'accueil</title>
-  <meta name="description" content="Ecoride — Plateforme de covoiturage écologique. Trouve ton trajet, réservez, roulez responsable." />
-  <link rel="stylesheet" href="css/style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="EcoRide — Plateforme de covoiturage écologique. Trouvez, réservez et partagez vos trajets responsables.">
+  <title>EcoRide — Page d’accueil</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="/">
-        <!-- simple logo SVG -->
+      <a class="brand" href="index.html">
+        <!-- Logo inline SVG -->
         <svg width="36" height="36" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-          <circle cx="12" cy="12" r="10" fill="#2b9348"/>
-          <path d="M6 15c1.5-3 4.5-6 10-8" stroke="#fff" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          <circle cx="12" cy="12" r="10" fill="#2b9348"></circle>
+          <path d="M6 15c1.5-3 4.5-6 10-8" stroke="#fff" stroke-width="1.5" fill="none" stroke-linecap="round"></path>
         </svg>
-        <span>Ecoride</span>
+        <span>EcoRide</span>
       </a>
-
       <nav class="main-nav" aria-label="Navigation principale">
-        <a href="/">Accueil</a>
+        <a href="index.html">Accueil</a>
         <a href="#trips">Covoiturages</a>
-        <a href="#how-it-works">Comment ça marche</a>
+        <a href="login.html">Connexion</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <!-- Hero -->
+    <!-- Hero section -->
     <section class="hero">
       <div class="container hero-inner">
         <div class="hero-copy">
-          <h1>Roulez ensemble, roulez responsable.</h1>
-          <p class="lead">Trouvez un covoiturage écologique rapidement — partagez le trajet, réduisez votre empreinte carbone.</p>
+          <h1>Roulez ensemble, roulez responsable</h1>
+          <p class="lead">Partagez un trajet, réduisez vos coûts et votre empreinte carbone.</p>
 
-          <!-- Search card -->
+          <!-- Formulaire de recherche -->
           <form id="searchForm" class="search-card" aria-label="Formulaire de recherche de covoiturage">
             <div class="row">
-              <label for="from" class="sr-only">Ville départ</label>
-              <input id="from" name="from" type="text" placeholder="Ville départ (ex: Paris)" required />
+              <label for="from" class="sr-only">Ville de départ</label>
+              <input id="from" name="from" type="text" placeholder="Ville de départ (ex: Paris)" required>
             </div>
             <div class="row">
-              <label for="to" class="sr-only">Ville arrivée</label>
-              <input id="to" name="to" type="text" placeholder="Ville arrivée (ex: Lyon)" required />
+              <label for="to" class="sr-only">Ville d’arrivée</label>
+              <input id="to" name="to" type="text" placeholder="Ville d’arrivée (ex: Lyon)" required>
             </div>
             <div class="row small">
-              <label for="date" class="sr-only">Date</label>
-              <input id="date" name="date" type="date" />
-              <select id="ecoFilter" name="ecoFilter" title="Filtrer par trajet écologique">
-                <option value="any">Any</option>
+              <label for="date" class="sr-only">Date du trajet</label>
+              <input id="date" name="date" type="date">
+              <label for="ecoFilter" class="sr-only">Filtrer par type de trajet</label>
+              <select id="ecoFilter" name="ecoFilter">
+                <option value="any">Tous</option>
                 <option value="eco">Écologique seulement</option>
               </select>
             </div>
-
             <div class="row actions">
               <button type="submit" class="btn primary">Rechercher</button>
               <button id="demoBtn" type="button" class="btn outline">Voir exemple</button>
             </div>
-            <p class="hint">Astuce : laisse la date vide pour voir tous les trajets disponibles.</p>
           </form>
-
-        </div>
-
-        <!-- Hero visual (SVG) -->
-        <div class="hero-image" aria-hidden="true">
-          <svg viewBox="0 0 600 400" preserveAspectRatio="xMidYMid meet">
-            <rect width="100%" height="100%" rx="16" fill="#e9f7ec" />
-            <g transform="translate(60,60)">
-              <ellipse cx="200" cy="220" rx="120" ry="30" fill="#c6f0cf"/>
-              <path d="M20 200 Q90 120 200 180 Q330 260 480 170" stroke="#2b9348" stroke-width="8" fill="none" stroke-linecap="round"/>
-              <circle cx="160" cy="150" r="20" fill="#2b9348"/>
-              <circle cx="380" cy="140" r="20" fill="#2b9348"/>
-            </g>
-          </svg>
         </div>
       </div>
     </section>
 
-    <!-- How it works -->
-    <section id="how-it-works" class="container how-it-works">
-      <h2>Comment ça marche</h2>
-      <div class="grid-3">
-        <article class="card small">
-          <h3>Recherchez</h3>
-          <p>Entrez votre ville de départ et d'arrivée, choisissez la date et trouvez un trajet.</p>
-        </article>
-        <article class="card small">
-          <h3>Réservez</h3>
-          <p>Sélectionnez une place, confirmez et communiquez avec le conducteur.</p>
-        </article>
-        <article class="card small">
-          <h3>Partagez</h3>
-          <p>Voyagez ensemble, payez en crédits, laissez un avis à la fin du trajet.</p>
-        </article>
-      </div>
-    </section>
-
-    <!-- Search results (dynamically filled) -->
+    <!-- Résultats -->
     <section id="trips" class="container results">
       <h2>Résultats</h2>
       <div id="resultsList" class="results-list" aria-live="polite">
-        <p class="muted">Aucune recherche effectuée. Utilise le formulaire pour trouver des trajets.</p>
-      </div>
-    </section>
-
-    <!-- Newsletter / CTA -->
-    <section class="container cta">
-      <div class="cta-card">
-        <h3>Prêt à économiser et à réduire ton empreinte ?</h3>
-        <p>Inscris-toi pour recevoir des alertes de trajets près de chez toi.</p>
-        <form id="newsletterForm" class="newsletter" aria-label="Inscription newsletter">
-          <input id="newsletterEmail" type="email" placeholder="Ton email" required />
-          <button class="btn" type="submit">S'inscrire</button>
-        </form>
+        <p class="muted">Aucune recherche effectuée. Utilisez le formulaire ci-dessus.</p>
       </div>
     </section>
   </main>
 
+  <!-- Footer -->
   <footer id="contact" class="site-footer">
     <div class="container footer-inner">
       <div class="footer-left">
-        <p><strong>Ecoride</strong> — Plateforme de covoiturage écoresponsable</p>
+        <p><strong>EcoRide</strong> — Plateforme de covoiturage écoresponsable</p>
         <p>Contact : <a href="mailto:contact@ecoride.example">contact@ecoride.example</a></p>
       </div>
       <div class="footer-right">
         <nav>
           <a href="/legal.html">Mentions légales</a>
-          <a href="/faq.html">FAQ</a>
-          <a href="/contribute.html">Contribuer</a>
         </nav>
-        <p class="small muted">© <span id="year"></span> Ecoride — Tous droits réservés</p>
+        <p class="small muted">© <span id="year"></span> EcoRide — Tous droits réservés</p>
       </div>
     </div>
   </footer>
-
-  <script src="js/main.js"></script>
 </body>
 </html>

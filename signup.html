@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="EcoRide — Créer un compte utilisateur et rejoindre le covoiturage écologique">
+  <title>EcoRide — Créer un compte</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/signup.js" defer></script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <svg width="36" height="36" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <circle cx="12" cy="12" r="10" fill="#2b9348"></circle>
+          <path d="M6 15c1.5-3 4.5-6 10-8" stroke="#fff" stroke-width="1.5" fill="none" stroke-linecap="round"></path>
+        </svg>
+        <span>EcoRide</span>
+      </a>
+      <nav class="main-nav" aria-label="Navigation principale">
+        <a href="index.html">Accueil</a>
+        <a href="trips.html">Covoiturages</a>
+        <a href="login.html">Connexion</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main content -->
+  <main class="container" aria-label="Formulaire de création de compte">
+    <h1>Créer un compte</h1>
+    <form id="signupForm" class="card" aria-label="Formulaire d’inscription">
+      <div class="row">
+        <label for="pseudo">Pseudo</label>
+        <input id="pseudo" name="pseudo" type="text" required placeholder="Votre pseudo">
+      </div>
+      <div class="row">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required placeholder="exemple@mail.com">
+      </div>
+      <div class="row">
+        <label for="password">Mot de passe</label>
+        <input id="password" name="password" type="password" required minlength="8" placeholder="Minimum 8 caractères">
+      </div>
+      <div class="row actions">
+        <button type="submit" class="btn primary">S’inscrire</button>
+      </div>
+      <p class="small muted">Un nouveau compte démarre avec 20 crédits offerts.</p>
+    </form>
+  </main>
+
+  <!-- Footer -->
+  <footer id="contact" class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <p><strong>EcoRide</strong> — Plateforme de covoiturage écoresponsable</p>
+        <p>Contact : <a href="mailto:contact@ecoride.example">contact@ecoride.example</a></p>
+      </div>
+      <div class="footer-right">
+        <nav>
+          <a href="/legal.html">Mentions légales</a>
+        </nav>
+        <p class="small muted">© <span id="year"></span> EcoRide — Tous droits réservés</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="EcoRide — Créer un nouveau voyage de covoiturage">
+  <title>EcoRide — Créer un voyage</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/trip-create.js" defer></script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <svg width="36" height="36" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <circle cx="12" cy="12" r="10" fill="#2b9348"></circle>
+          <path d="M6 15c1.5-3 4.5-6 10-8" stroke="#fff" stroke-width="1.5" fill="none" stroke-linecap="round"></path>
+        </svg>
+        <span>EcoRide</span>
+      </a>
+      <nav class="main-nav" aria-label="Navigation principale">
+        <a href="index.html">Accueil</a>
+        <a href="trips.html">Covoiturages</a>
+        <a href="login.html">Connexion</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main content -->
+  <main class="container" aria-label="Formulaire de création de voyage">
+    <h1>Créer un voyage</h1>
+    <form id="tripForm" class="card" aria-label="Formulaire de saisie d’un nouveau covoiturage">
+      <div class="row">
+        <label for="from">Adresse de départ</label>
+        <input id="from" name="from" type="text" required placeholder="Ex: Paris, Gare de Lyon">
+      </div>
+
+      <div class="row">
+        <label for="to">Adresse d’arrivée</label>
+        <input id="to" name="to" type="text" required placeholder="Ex: Lyon, Part-Dieu">
+      </div>
+
+      <div class="row">
+        <label for="departure">Date et heure de départ</label>
+        <input id="departure" name="departure" type="datetime-local" required>
+      </div>
+
+      <div class="row">
+        <label for="vehicleSelect">Véhicule</label>
+        <select id="vehicleSelect" name="vehicleSelect" required>
+          <option value="">-- Sélectionnez un véhicule --</option>
+          <!-- Options remplies en JS -->
+          <option value="new">+ Ajouter un nouveau véhicule</option>
+        </select>
+      </div>
+
+      <!-- Sous-formulaire pour ajout de véhicule -->
+      <div id="newVehicleForm" style="display:none; margin-top:16px;" aria-label="Formulaire nouveau véhicule">
+        <h3>Ajouter un véhicule</h3>
+        <div class="row">
+          <label for="plate">Plaque d’immatriculation</label>
+          <input id="plate" name="plate" type="text" placeholder="AB-123-CD">
+        </div>
+        <div class="row">
+          <label for="brand">Marque</label>
+          <input id="brand" name="brand" type="text" placeholder="Renault">
+        </div>
+        <div class="row">
+          <label for="model">Modèle</label>
+          <input id="model" name="model" type="text" placeholder="Zoe">
+        </div>
+        <div class="row">
+          <label for="energy">Énergie</label>
+          <select id="energy" name="energy">
+            <option value="electrique">Électrique</option>
+            <option value="hybride">Hybride</option>
+            <option value="essence">Essence</option>
+            <option value="diesel">Diesel</option>
+          </select>
+        </div>
+        <div class="row">
+          <label for="seats">Nombre de places disponibles</label>
+          <input id="seats" name="seats" type="number" min="1" max="8">
+        </div>
+      </div>
+
+      <div class="row">
+        <label for="price">Prix du trajet (€)</label>
+        <input id="price" name="price" type="number" min="1" required>
+      </div>
+
+      <div class="row actions" style="margin-top:16px;">
+        <button type="submit" class="btn primary">Publier le voyage</button>
+      </div>
+    </form>
+  </main>
+
+  <!-- Footer -->
+  <footer id="contact" class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <p><strong>EcoRide</strong> — Plateforme de covoiturage écoresponsable</p>
+        <p>Contact : <a href="mailto:contact@ecoride.example">contact@ecoride.example</a></p>
+      </div>
+      <div class="footer-right">
+        <nav>
+          <a href="/legal.html">Mentions légales</a>
+        </nav>
+        <p class="small muted">© <span id="year"></span> EcoRide — Tous droits réservés</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
+

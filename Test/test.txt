@@ -1,0 +1,49 @@
+1. **Ouverture page**
+
+   * Action : Ouvrir `index.html` dans le navigateur (desktop).
+   * Résultat attendu : La page se charge sans erreur, header visible, hero avec formulaire et footer avec année courante.
+
+2. **Responsive mobile**
+
+   * Action : Redimensionner la fenêtre à <900px ou utiliser l’outil mobile DevTools.
+   * Résultat attendu : Le hero passe en une seule colonne, le menu s’adapte, tout reste lisible et aligné.
+
+3. **Navigation clavier**
+
+   * Action : Utiliser uniquement la touche **Tab** pour naviguer dans la page.
+   * Résultat attendu : Chaque lien et champ reçoit un focus visible, l’ordre de navigation est logique (header → formulaire → résultats → footer).
+
+4. **Accessibilité formulaire**
+
+   * Action : Survoler les champs de recherche et vérifier le code HTML.
+   * Résultat attendu : Chaque champ a un label (`sr-only`) et un placeholder lisible, `aria-live="polite"` est présent sur la zone résultats.
+
+5. **Bouton « Voir exemple »**
+
+   * Action : Cliquer sur « Voir exemple ».
+   * Résultat attendu : Les champs sont remplis avec un trajet Paris → Lyon et un résultat de démonstration s’affiche.
+
+6. **Recherche simple**
+
+   * Action : Saisir un trajet existant (ex. Paris → Lyon, 2025-09-20) puis valider.
+   * Résultat attendu : Une carte de résultat s’affiche avec pseudo, note, places, prix, horaires et tag « Écologique » si applicable.
+
+7. **Filtres prix max / durée max / note min**
+
+   * Action : Entrer des filtres restrictifs (ex. prix max = 10, durée max = 60, note min = 5).
+   * Résultat attendu : Aucun trajet ne correspond → affichage du message « Aucun résultat trouvé » + bouton « Voir le trajet le plus proche ».
+
+8. **Bouton « Voir le trajet le plus proche »**
+
+   * Action : Cliquer sur ce bouton après un échec de recherche.
+   * Résultat attendu : Un trajet de démonstration s’affiche dans la zone résultats.
+
+9. **Footer année**
+
+   * Action : Vérifier le footer en bas de page.
+   * Résultat attendu : L’année affichée correspond à l’année courante (mise à jour automatique via JS).
+
+10. **Console navigateur**
+
+    * Action : Ouvrir Chrome DevTools → onglet Console et interagir avec formulaire + filtres.
+    * Résultat attendu : Aucun message d’erreur ou avertissement bloquant n’apparaît dans la console.
